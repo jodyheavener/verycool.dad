@@ -1,0 +1,46 @@
+<title>Happy Birthday</title>
+
+<div class="container">
+  <div>
+  <h1 class="title">This is a very cool dad</h1>
+  </div>
+  <img class="image" />
+</div>
+
+<script>
+  const images = ["./dad1.png", "./dad2.png", "./dad3.png", "./dad4.png", "./dad5.png"];
+  const img = document.querySelector("img");
+  img.src = images.sort(() => 0.5 - Math.random())[0];
+</script>
+
+<style>
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .container {
+    text-align: center;
+    font-family: 'impact';
+  }
+
+  .title  {
+    display: inline-block;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .image {
+    animation: rotate 4s infinite linear;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+</style>
